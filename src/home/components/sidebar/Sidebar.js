@@ -1,5 +1,6 @@
 import React from 'react'
 import SidebarOption from './SidebarOption'
+import {Link} from 'react-router-dom'
 import './Sidebar.css'
 
 function Sidebar() {
@@ -7,7 +8,7 @@ function Sidebar() {
     <div className="sidebar">
       Sidebar
       <br></br>
-      初めての方はこちらから
+      <Link to={"/about"}>初めての方はこちらから</Link>
       <SidebarOption text="〜コミュニティ" />
       <SidebarOption text="〇〇コミュニティ" />
     </div>

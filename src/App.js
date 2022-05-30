@@ -1,15 +1,17 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Sidebar from './components/sidebar/Sidebar';
-import Timeline from './components/timeline/Timeline';
+import Home from './home/components/Home';
+import About from './about/About';
 
 function App() {
   return(
   <div className="app">
-    {/* Sidebar */}
-    <Sidebar />
-
-    {/* Timeline */}
-    <Timeline />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   </div>
   )
 }
